@@ -1,0 +1,121 @@
+{
+    "extends": "fortech-react",
+    "env": {
+        "browser": true,
+        "jest": true
+    },
+    "rules": {
+        "react/prop-types": 0,
+        "max-params": [
+            "error",
+            20
+        ],
+        "eqeqeq": "error",
+        "no-unused-vars": [
+            "error",
+            {
+                "vars": "local"
+            }
+        ],
+        "no-use-before-define": "warn",
+        "no-dupe-keys": "error",
+        "no-useless-concat": "error",
+        "no-console": "warn",
+        "no-debugger": "warn",
+        "no-dupe-args": "error",
+        "no-empty": "error",
+        "no-irregular-whitespace": "error",
+        "no-unreachable": "error",
+        "array-callback-return": "warn",
+        "curly": "error",
+        "default-case": "error",
+        "dot-notation": "error",
+        "no-alert": "error",
+        "no-else-return": "error",
+        "no-empty-function": [
+            "error",
+            {
+                "allow": [
+                    "constructors"
+                ]
+            }
+        ],
+        "no-eq-null": "error",
+        "no-lone-blocks": "error",
+        "no-loop-func": "error",
+        "no-multi-spaces": "error",
+        "no-redeclare": "error",
+        "no-self-compare": "error",
+        "no-self-assign": "error",
+        "no-unused-expressions": [
+            "error",
+            {
+                "allowShortCircuit": true
+            }
+        ],
+        "no-useless-catch": "error",
+        "no-useless-return": "error",
+        "require-await": "error",
+        "no-shadow": "error",
+        "no-shadow-restricted-names": "error",
+        "no-undef": "error",
+        "capitalized-comments": "error",
+        "comma-dangle": "error",
+        "comma-spacing": "error",
+        "eol-last": "error",
+        "newline-per-chained-call": "error",
+        "no-lonely-if": "error",
+        "no-multiple-empty-lines": "error",
+        "no-trailing-spaces": "error",
+        "no-underscore-dangle": "error",
+        "no-unneeded-ternary": "error",
+        "one-var-declaration-per-line": "error",
+        "spaced-comment": "error",
+        "no-duplicate-imports": "error",
+        "no-const-assign": "error",
+        "no-dupe-class-members": "error",
+        "no-var": "error",
+        "prefer-arrow-callback": "error",
+        "constructor-super": "error",
+        "for-direction": "error",
+        "getter-return": "error",
+        "no-case-declarations": "error",
+        "no-class-assign": "error",
+        "no-compare-neg-zero": "error",
+        "no-cond-assign": "error",
+        "no-constant-condition": "error",
+        "no-control-regex": "error",
+        "no-delete-var": "error",
+        "no-duplicate-case": "error",
+        "no-empty-character-class": "error",
+        "no-empty-pattern": "error",
+        "no-ex-assign": "error",
+        "no-extra-boolean-cast": "error",
+        "no-extra-semi": "error",
+        "no-fallthrough": "error",
+        "no-func-assign": "error",
+        "no-global-assign": "error",
+        "no-inner-declarations": "error",
+        "no-invalid-regexp": "error",
+        "no-mixed-spaces-and-tabs": "error",
+        "no-new-symbol": "error",
+        "no-obj-calls": "error",
+        "no-octal": "error",
+        "no-regex-spaces": "error",
+        "no-sparse-arrays": "error",
+        "no-this-before-super": "error",
+        "no-unexpected-multiline": "error",
+        "no-unsafe-finally": "error",
+        "no-unsafe-negation": "error",
+        "no-unused-labels": "error",
+        "no-useless-escape": "error",
+        "require-yield": "error",
+        "use-isnan": "error",
+        "valid-typeof": "error",
+        "jsx-a11y/accessible-emoji": 2,
+        "jsx-a11y/alt-text": 2,
+        "jsx-a11y/no-distracting-elements": 2,
+        "jsx-a11y/iframe-has-title": 2,
+        "jsx-a11y/no-redundant-roles": 2
+    }
+}
