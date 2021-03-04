@@ -6,8 +6,8 @@
     "node": "10.15.1"
   },
   "scripts": {
-    "build": "webpack --progress",
-    "start": "node main.js",
+    "build": "NODE_ENV=development webpack --progress",
+    "start": "npm run build && node main.js",
     "dev": "npm-run-all --parallel server client",
     "server": "node main.js",
     "client": "webpack --watch --progress",
