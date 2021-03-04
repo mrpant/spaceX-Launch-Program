@@ -15,7 +15,7 @@ import { get } from 'lodash';
 // TOOD : Get ref of express in app for globel use.
 const app = express();
 // TODO : Port not setted in .env then default port will be 3000.
-const PORT = process.env.PORT || 9934;
+const PORT = process.env.PORT || 8080;
 
 // TODO : Get build file from dir.
 app.use(express.static(path.resolve(__dirname, "../../build")));
