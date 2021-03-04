@@ -1,4 +1,3 @@
-const isDEV = process.env.NODE_ENV !== "production";
 const path = require('path');
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -21,9 +20,9 @@ const PLUGINS = [
 
 // TODO : Webpack Configuration  
 module.exports = {
-    mode: isDEV ? "development" : "production",
+    mode: "development",
     context: path.join(__dirname, "src"),
-    devtool: isDEV ? 'none' : "source-map",
+    devtool: "source-map",
     entry: {
         app: "./client/index",
     },

@@ -6,15 +6,14 @@
     "node": "10.15.1"
   },
   "scripts": {
-    "build": "NODE_ENV=production webpack --progress",
-    "start": "NODE_ENV=production webpack --progress",
-    "dev": "npm-run-all --parallel server client",
+    "build": "webpack --progress",
+    "start": "npm-run-all --parallel server client",
     "server": "nodemon main.js",
     "client": "webpack --watch --progress",
     "lint": "eslint src",
     "clean": "rd /s /q  build",
-    "heroku-prebuild": "npm install",
-    "heroku-postbuild": "NODE_ENV=production webpack --progress"
+    "heroku-prebuild": "npm install --dev",
+    "heroku-postbuild": "webpack --progress"
   },
   "dependencies": {
     "axios": "^0.21.1",
