@@ -4,7 +4,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
 require('dotenv').config()
 
-
 // TODO : External plugin to use here.
 const PLUGINS = [
     new FriendlyErrorsWebpackPlugin(),
@@ -20,7 +19,7 @@ const PLUGINS = [
 
 // TODO : Webpack Configuration  
 module.exports = {
-    mode: "development",
+    mode: process.env.NODE_ENV || 'development',
     context: path.join(__dirname, "src"),
     devtool: "source-map",
     entry: {
