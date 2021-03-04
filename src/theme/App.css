@@ -1,6 +1,4 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -10,7 +8,9 @@ header h1 {
 }
 
 body {
-    background: #e8e8e8;
+  margin: 0;
+  padding: 0;
+  background: #e8e8e8;
 }
 
 .container {
@@ -82,6 +82,11 @@ body {
   left: 40%;
   font-size: 26px;
   font-weight: 300;
+  background: #cec9c963;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .content-container .item {
@@ -113,6 +118,7 @@ body {
     position: relative;
     left: 10%;
     color: #2a36c8;
+    width: 90%;
 }
 
 .content-container .item p .heading {
@@ -125,8 +131,14 @@ footer {
 
 /*  // For Mobile View */
 @media only screen and (max-width: 700px) {
+    body{
+      margin: revert;
+      margin-left: 5%;
+    }
     .container {
         display: block;
+        position: relative;
+        left: -3%;
     }
 
     .left-section {
@@ -139,6 +151,8 @@ footer {
 
     .content-container {
         display: block;
+        position: relative;
+        left: -2%;
     }
 
     .content-container .item {
@@ -148,7 +162,14 @@ footer {
 
     .content-container .item .img-container {
         width: 100%;
-        height: 400px;
+        height: 300px;
+    }
+    .content-container .no-result{
+      left: -2%;
+      top: 0%;
+    }
+    .content-container .item p{
+      padding-top: 0%;
     }
 
 }
@@ -156,19 +177,29 @@ footer {
 /*  // For Tablet View */
 @media only screen and (min-width: 700px) and (max-width: 1024px)  {
   .left-section{
-    flex :40;
+    flex :30;
   }
 
   .right-section{
-    flex :60;
+    flex :70;
   }
   .content-container .item{
     flex-basis: 48%;
   }
+  .content-container .no-result{
+    left:25%;
+  }
+  .content-container .item p{
+    padding-top: 0%;
+  }
 
 }
 
-
+@media only screen and (min-width: 1024px) and (max-width: 1440px)  {
+  .content-container .item .img-container{
+    height: 300px;
+  }
+}
 
 /********** Loading CSS **************/
 div.loading{

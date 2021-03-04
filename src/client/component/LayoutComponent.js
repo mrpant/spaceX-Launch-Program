@@ -85,15 +85,15 @@ class LayoutComponent extends Component {
                         title="Successful Launch"
                         list={BOOLEAN}
                         onClickHandler={this.setFilterOnStateHandler}
-                        filterType={'isLanding'}
-                        selectedItem={get(filter, 'isLanding')}
+                        filterType={'isLaunch'}
+                        selectedItem={get(filter, 'isLaunch')}
                     />
                     <FilterComponent
                         title="Successful Landing"
                         list={BOOLEAN}
                         onClickHandler={this.setFilterOnStateHandler}
-                        filterType={'isLaunch'}
-                        selectedItem={get(filter, 'isLaunch')}
+                        filterType={'isLanding'}
+                        selectedItem={get(filter, 'isLanding')}
                     />
                 </section>
                 {isLoader && <LoadingComponent />}

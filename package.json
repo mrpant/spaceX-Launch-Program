@@ -7,9 +7,9 @@
   },
   "scripts": {
     "build": "webpack --progress",
-    "start": "npm run build && node main.js",
+    "start": "npm run build && nodemon main.js",
     "dev": "npm-run-all --parallel server client",
-    "server": "node main.js",
+    "server": "nodemon main.js",
     "client": "webpack --watch --progress",
     "lint": "eslint src",
     "clean": "rd /s /q  build",

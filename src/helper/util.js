@@ -26,9 +26,9 @@ export const getParamsFromUrl = (pathname, isEmptyResponseObject = true) => {
 // TODO : Prepare object for api params.
 export const setFilterKeys = (filter) => {
     let params = {};
-    params['launch_year'] = filter['year'];
-    params['launch_success'] = filter['isLaunch'];
-    params['land_success'] = filter['isLanding'];
+    if (filter['year']) params['launch_year'] = filter['year'];
+    if (filter['isLaunch']) params['launch_success'] = filter['isLaunch'];
+    if (filter['isLanding']) params['land_success'] = filter['isLanding'];
     return params;
 }
 
