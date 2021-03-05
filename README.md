@@ -9,10 +9,6 @@ DEMO URL : [SpaceX Launch Program](https://space-launch-program-app.herokuapp.co
   The application required to use SSR(Server Side Rendering) and I'm going to use express (Server) and react (Client).
   ![File Structure](/images/logo.png)
 
-# Prerequisites
-
-      All Required Dependecy installed in Machine as per the below screenshot in package.json.
-
 ## Design 
 
 I have created design as per below screens.
