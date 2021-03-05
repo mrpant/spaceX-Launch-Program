@@ -27,7 +27,20 @@ No third-party library being used, compete CSS code has been written in custom C
 In the Left section, We have respective filters and in the right section, displaying the cards listing section.
 And both of the sections behaving as per the respective above screens.
 
-  ## STEP 1 - Create Sharable Component.
+  ## STEP 1 - Configure Webpack.config.json
+    ![GitHub Logo](/images/logo.png)
+
+  ## STEP 2 - Create Server root file. (path : /src/server/index.js)
+    ![GitHub Logo](/images/logo.png)
+  
+  ## STEP 3 - Create Client root file. (path : /src/client/index.js)
+      ![GitHub Logo](/images/logo.png)
+      
+  ## STEP 4 - Setup Client entry point in Webpack and Server in main.js using babel-register.
+  
+  ## STEP 5 - Setup Script in package.json to run application.
+     
+  ## STEP 6 -  Create Sharable Component.
 
   I have created 3 sharable components which is reusable.
 
