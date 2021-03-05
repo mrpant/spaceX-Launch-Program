@@ -84,6 +84,8 @@ And both of the sections behaving as per the respective above screens.
 
 
 
+
+
  ## STEP 2 - Create Server root file. (path : /src/server/index.js)
                   
 
@@ -148,6 +150,11 @@ And both of the sections behaving as per the respective above screens.
                             console.log("Server is Running on port", PORT)
                         });
 
+
+
+
+
+
           
   ## STEP 3 - Create Client root file. (path : /src/client/index.js)
                // TODO : Update initial values on store.
@@ -164,6 +171,11 @@ And both of the sections behaving as per the respective above screens.
                 // TODO : Process for rehydrate
                 const app = document.getElementById("app");
                 ReactDOM.hydrate(jsx, app);
+
+
+
+
+
 
       
   ## STEP 4 - Setup Client entry point in Webpack and Server in main.js using babel-register.
@@ -186,6 +198,11 @@ And both of the sections behaving as per the respective above screens.
                 // TODO : entry point of server file.
                 require("./src/server/index");
 
+
+
+
+
+
   ## STEP 5 - Setup Script in package.json to run application.
   
                    "scripts": {
@@ -199,21 +216,28 @@ And both of the sections behaving as per the respective above screens.
                       "heroku-prebuild": "npm install --dev",
                       "heroku-postbuild": "webpack --progress"
                     },
+                    
+                    
+                    
+                    
+                    
      
   ## STEP 6 -  Create Sharable Component.
 
   I have created 3 sharable components which is reusable.
+  
+  
+  
 
-  1. Card Component
-                        
-                        import React from 'react';
+  ### Card Component
+
                         
                 // TODO : Common Card Component.
                 
                 const CardComponent = ({ title, mission, launchYear, isSuccessLaunch, isSuccessLanding, imgUrl, ...props }) => {
                     return (
                         <div className="item" tabIndex="0">
-                            <div className="img-container" style={{ "background": `url(${imgUrl}) no-repeat center center`, "backgroundSize": "contain", "backgroundColor":     "#ebeaea" }}></div>
+                            <div className="img-container" style={{ "background": `url(${imgUrl}) no-repeat center center`, "backgroundSize": "contain", "backgroundColor":       "#ebeaea" }}></div>
                             <p><strong>{title}</strong></p>
                             <p><strong className="heading">Mission Id : </strong> {mission && mission.length === 0 ? '---' : ''}</p>
                             {
@@ -227,10 +251,14 @@ And both of the sections behaving as per the respective above screens.
                         </div >
                     )
                 }
-
                 export default CardComponent;
                 
-  1. Filter Component
+                
+                
+                
+                
+                
+  ### Filter Component
                             
                             // TODO : Common Filter Component.
                         const FilterComponent = ({ title, list, onClickHandler, filterType, selectedItem, ...props }) => {
@@ -249,20 +277,24 @@ And both of the sections behaving as per the respective above screens.
 
                         export default FilterComponent;
                         
-  1. LoadingComponent
+                        
+                        
+                        
+                        
+                        
+  ### LoadingComponent
 
-                  // TODO : Common Loading Component.
-            const LoadingComponent = ({ ...props }) => {
-                return (
-                    <div className="loading">
-                        <div className='uil-ring-css' style={{ transform: 'scale(0.79)' }}>
-                            <div></div>
-                        </div>
-                    </div>
-                )
-            }
-
-export default LoadingComponent;
+                // TODO : Common Loading Component.
+                        const LoadingComponent = ({ ...props }) => {
+                           return (
+                                 <div className="loading">
+                                         <div className='uil-ring-css' style={{ transform: 'scale(0.79)' }}>
+                              <div></div>
+                              </div>
+                          </div>
+                      )
+                  }
+                  export default LoadingComponent;
     
 
 
