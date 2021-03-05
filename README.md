@@ -28,9 +28,65 @@ In the Left section, We have respective filters and in the right section, displa
 And both of the sections behaving as per the respective above screens.
 
   ## STEP 1 - Configure Webpack.config.json
-    ![GitHub Logo](/images/logo.png)
+  
+ ```javascript
+ 
+      // TODO : External plugin to use here.
+      const PLUGINS = [
+          new FriendlyErrorsWebpackPlugin(),
+          new MiniCssExtractPlugin({
+              filename: "styles.css",
+          }),
+          new webpack.DefinePlugin({
+              'process.env': {
+                  // TODO : Set Environment variable for react app.
+              }
+          })
+      ];
 
-  ## STEP 2 - Create Server root file. (path : /src/server/index.js)
+      // TODO : Webpack Configuration  
+      module.exports = {
+          mode: process.env.NODE_ENV || 'development',
+          context: path.join(__dirname, "src"),
+          devtool: "source-map",
+          entry: {
+              app: "./client/index",
+          },
+          resolve: {
+              modules: [
+                  path.resolve("./src"),
+                  "node_modules",
+              ],
+          },
+          module: {
+              rules: [
+                  {
+                      test: /\.jsx?$/,
+                      exclude: /(node_modules)/,
+                      loader: "babel-loader"
+                  }, {
+                      test: /\.css$/,
+                      use: [
+                          {
+                              loader: MiniCssExtractPlugin.loader,
+                          },
+                          "css-loader",
+                      ],
+                  },
+              ],
+          },
+          output: {
+              path: path.resolve(__dirname, "build"),
+              filename: "[name].bundle.js",
+          },
+          plugins: PLUGINS
+      }      
+      ```
+      
+
+
+
+ ## STEP 2 - Create Server root file. (path : /src/server/index.js)
     ![GitHub Logo](/images/logo.png)
   
   ## STEP 3 - Create Client root file. (path : /src/client/index.js)
