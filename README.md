@@ -27,16 +27,18 @@ No third-party library being used, compete CSS code has been written in custom C
 In the Left section, We have respective filters and in the right section, displaying the cards listing section.
 And both of the sections behaving as per the respective above screens.
 
-## Sharable Component.
+# Steps 1
 
-I have created 3 sharable components which is reusable.
+  ## Create Sharable Component.
 
-1. Card Component
-![GitHub Logo](/images/logo.png)
-1. Filter Component
-![GitHub Logo](/images/logo.png)
-1. LoadingComponent
- ![GitHub Logo](/images/logo.png)
+  I have created 3 sharable components which is reusable.
+
+  1. Card Component
+  ![GitHub Logo](/images/logo.png)
+  1. Filter Component
+  ![GitHub Logo](/images/logo.png)
+  1. LoadingComponent
+  ![GitHub Logo](/images/logo.png)
     
 
 
