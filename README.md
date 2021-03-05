@@ -27,9 +27,7 @@ No third-party library being used, compete CSS code has been written in custom C
 In the Left section, We have respective filters and in the right section, displaying the cards listing section.
 And both of the sections behaving as per the respective above screens.
 
-# Steps 1
-
-  ## Create Sharable Component.
+  ## STEP 1 - Create Sharable Component.
 
   I have created 3 sharable components which is reusable.
 
