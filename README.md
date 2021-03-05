@@ -178,7 +178,7 @@ And both of the sections behaving as per the respective above screens.
 
 
       
-  ## STEP 4 - Setup Client entry point in Webpack and Server in main.js using babel-register.
+  ## STEP 4 - Setup Server as main.js using babel-register.
           
                 // TODO : Babel register to set entry point and allows to node ES6
                 require("babel-register")({
