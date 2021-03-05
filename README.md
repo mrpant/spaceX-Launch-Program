@@ -29,7 +29,7 @@ And both of the sections behaving as per the respective above screens.
 
   ## STEP 1 - Configure Webpack.config.json
   
-      ```
+  
         // TODO : External plugin to use here.
           const PLUGINS = [
               new FriendlyErrorsWebpackPlugin(),
@@ -80,7 +80,7 @@ And both of the sections behaving as per the respective above screens.
               },
               plugins: PLUGINS
           }
-      ```
+     
 
 
 
