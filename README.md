@@ -315,8 +315,10 @@ And both of the sections behaving as per the respective above screens.
     
  # SEO 
 
-    For SEO Helmet library used to change head information as per the requested change and we took title and description for demo perpose.
-    
+    For SEO Helmet library used to change head information (Tags Used in SEO) in every request change which is useful for indexing page in Search Engines. 
+
+    We took title and description for demo perpose.
+      
    ### Home Page Request
   ![Home Page request](https://github.com/mrpant/spaceX-Launch-Program/blob/bedca8cd54fdad00178b1b4fc756bc6e2c3b35dd/screenshot/SEO1.png)
    
