@@ -7,18 +7,28 @@ DEMO URL : [SpaceX Launch Program](https://space-launch-program-app.herokuapp.co
 # Demonstration 
 
   The application required to use SSR(Server Side Rendering) and I'm going to use express (Server) and react (Client).
-  ![File Structure](/images/logo.png)
+
+## File Structure
+
+  ### Client Flow
+  ![Client Flow](https://github.com/mrpant/spaceX-Launch-Program/blob/develop/screenshot/client-flow.png?raw=true)
+  
+  ### Server Flow
+  ![Server Flow](https://github.com/mrpant/spaceX-Launch-Program/blob/develop/screenshot/server-flow.png?raw=true)
+    
+  ### Global Flow  
+  ![Server Flow](https://github.com/mrpant/spaceX-Launch-Program/blob/develop/screenshot/global-file.png?raw=true)
 
 ## Design 
 
 I have created design as per below screens.
 
 ### Mobile Screen
-![GitHub Logo](/images/logo.png)
+![Mobile Screen](https://github.com/mrpant/spaceX-Launch-Program/blob/develop/screenshot/Mobile.jpg?raw=true)
 ### Tablet Screen
-![GitHub Logo](/images/logo.png)
+![Tablet Screen](https://github.com/mrpant/spaceX-Launch-Program/blob/develop/screenshot/Tablet.jpg?raw=true)
 ### Desktop Screen
-![GitHub Logo](/images/logo.png)
+![Desktop Screen](https://github.com/mrpant/spaceX-Launch-Program/blob/e625fa489a69eb6aa61861c9870d9b0e601c1340/screenshot/Desktop.png)
 
 No third-party library being used, compete CSS code has been written in custom CSS (Flex-Layout | Media Query) 
 
