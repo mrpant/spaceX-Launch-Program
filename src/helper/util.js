@@ -1,6 +1,6 @@
 // TODO : Object to QueryString.
 export const objectToQueryString = (obj) => {
-    let str = '?' + Object.keys(obj).reduce(function (a, k) {
+    let str = '&' + Object.keys(obj).reduce(function (a, k) {
         encodeURIComponent(obj[k]) && a.push(k + '=' + encodeURIComponent(obj[k]));
         return a;
     }, []).join('&');
@@ -40,7 +40,7 @@ export const capitalizeFirstLetter = (string) => {
 // TODO : Get value for land success
 export const getLandSuccess = (item) => {
     if (item) {
-        return item.rocket.first_stage.cores[0].land_success;
+        return item.rocket.first_stage.cores[0].land_success ? 'true' : 'false'
     }
-    return '';
+    return 'false';
 }
