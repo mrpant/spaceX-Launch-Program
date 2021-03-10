@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FilterComponent from '../atoms/FilterComponent';
-import { BOOLEAN, YEAR } from '../model';
-import { get } from 'lodash';
+import { LAND_SUCCESS, LAUNCH_SUCCESS, YEAR } from '../model';
+import { flatMap, get } from 'lodash';
 import LoadingComponent from '../atoms/LoadingComponent';
 import { getParamsFromUrl } from '../../helper/util';
 import Helmet from 'react-helmet';
@@ -24,6 +24,17 @@ class LayoutComponent extends Component {
     loadAPI() {
         const { getSpaceXAPI } = this.props;
         this.setUrlParamsToState((filter) => {
+            if (filter.year) {
+                this.setToggle(YEAR, filter.year)
+            }
+            if (filter.isLaunch) {
+                this.setToggle(LAUNCH_SUCCESS, filter.isLaunch)
+            }
+            if (filter.isLanding) {
+                this.setToggle(LAND_SUCCESS, filter.isLanding)
+            }
+
+            console.log(YEAR, "year", LAUNCH_SUCCESS, "LAU", LAND_SUCCESS);
             getSpaceXAPI(filter);
         })
 
@@ -49,12 +60,53 @@ class LayoutComponent extends Component {
         this.setState({ filter: { year, isLaunch, isLanding } }, () => cb({ year, isLaunch, isLanding }));
     }
 
+    // TODO : Set Toggle on Load.
+    setToggle(items, key) {
+        items.filter(x => x.text == key).map(y => y.isToggle = true);
+    }
+
+    // TODO : Reset Toggle on Click.
+    resetToggle(items, key) {
+        items.filter(x => x.text != key).map(y => y.isToggle = false);
+    }
+
     // TODO : OnClick Filter Handler.
     setFilterOnStateHandler(e, values, filterType) {
         const { filter } = this.state;
-        if (filterType == 'year') filter.year = values;
-        if (filterType == 'isLanding') filter.isLanding = values;
-        if (filterType == 'isLaunch') filter.isLaunch = values;
+
+        // TODO : Filter Type Year.
+        if (filterType == 'year') {
+            values.isToggle = !values.isToggle;
+            if (values.isToggle) {
+                filter.year = values.text;
+            } else {
+                filter.year = '';
+            }
+            this.resetToggle(YEAR, values.text)
+        }
+
+        // TODO : Filter Type isLanding Success.
+        if (filterType == 'isLanding') {
+            values.isToggle = !values.isToggle;
+            if (values.isToggle) {
+                filter.isLanding = values.text;
+            } else {
+                filter.isLanding = '';
+            }
+            this.resetToggle(LAND_SUCCESS, values.text)
+        }
+        // TODO : Filter Type isLaunch Success.
+        if (filterType == 'isLaunch') {
+            values.isToggle = !values.isToggle;
+            if (values.isToggle) {
+                filter.isLaunch = values.text;
+            } else {
+                filter.isLaunch = '';
+            }
+            this.resetToggle(LAUNCH_SUCCESS, values.text)
+        }
+
+
         this.setState({ ...this.state }, () => {
             this.props.getSpaceXAPI(this.state.filter);
             const currentUrl = this.createFilterUrl();
@@ -64,7 +116,7 @@ class LayoutComponent extends Component {
 
 
     render() {
-        const { isLoader, spaceXList, location } = this.props;
+        const { isLoader } = this.props;
         const { filter } = this.state;
         return (
             <section className="container">
@@ -83,14 +135,14 @@ class LayoutComponent extends Component {
                     />
                     <FilterComponent
                         title="Successful Launch"
-                        list={BOOLEAN}
+                        list={LAUNCH_SUCCESS}
                         onClickHandler={this.setFilterOnStateHandler}
                         filterType={'isLaunch'}
                         selectedItem={get(filter, 'isLaunch')}
                     />
                     <FilterComponent
                         title="Successful Landing"
-                        list={BOOLEAN}
+                        list={LAND_SUCCESS}
                         onClickHandler={this.setFilterOnStateHandler}
                         filterType={'isLanding'}
                         selectedItem={get(filter, 'isLanding')}

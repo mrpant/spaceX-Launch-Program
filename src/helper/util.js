@@ -42,5 +42,5 @@ export const getLandSuccess = (item) => {
     if (item) {
         return item.rocket.first_stage.cores[0].land_success ? 'true' : 'false'
     }
-    return 'false';
+    return '';
 }

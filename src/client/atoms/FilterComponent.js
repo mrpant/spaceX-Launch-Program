@@ -9,7 +9,7 @@ const FilterComponent = ({ title, list, onClickHandler, filterType, selectedItem
             <hr />
             <div className="filter-list-container">
                 {list && list.map((item, index) => {
-                    return <button style={{ background: item === selectedItem ? '#8bc457' : '#8bc4578c' }} key={index} title={item} onClick={(e) => onClickHandler(e, item, filterType)}>{capitalizeFirstLetter(item)}</button>
+                    return <button style={{ background: item.text === selectedItem ? '#8bc457' : '#8bc4578c' }} key={index} title={item} onClick={(e) => onClickHandler(e, item, filterType)}>{capitalizeFirstLetter(item.text)}</button>
                 })}
             </div>
         </div >
