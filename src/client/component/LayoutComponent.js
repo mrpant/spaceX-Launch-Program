@@ -33,8 +33,6 @@ class LayoutComponent extends Component {
             if (filter.isLanding) {
                 this.setToggle(LAND_SUCCESS, filter.isLanding)
             }
-
-            console.log(YEAR, "year", LAUNCH_SUCCESS, "LAU", LAND_SUCCESS);
             getSpaceXAPI(filter);
         })
 
